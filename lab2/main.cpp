@@ -2,13 +2,22 @@
 #include <ctime>
 #include <cstdio>
 
-#include "kolejka.h"
+#include "kolejkaTest.h"
 
 using namespace std;
 
+
 int main()
 {
-    clock_t start, koniec, czas;
+
+	kolejkaTest test1;
+	for (int i=0; i<11; i++)
+	{
+	test1.run(1000000);
+	}
+
+
+    /*clock_t start, koniec, czas;
 //----------------------------------------------------------
 {
      Kolejka xxx;
@@ -25,7 +34,7 @@ int main()
     }
 
 //-----------------------------------------------------------
-    /*{
+    {
     Kolejka xxx;
      start=clock();  //biezacy czas systemowy w ms
     for(int i=1;i<1001;i++)//dla 10^3

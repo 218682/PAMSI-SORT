@@ -11,17 +11,16 @@
 #include <string>
 #include "kolejka.h"
 #include "IRUNNABLE.h"
+#include "Stopwatch.h"
 
-class kolejkaTest : public Kolejka, public IRUNNABLE
+class kolejkaTest : public Kolejka, public IRUNNABLE, public Stopwatch
 {
 public:
 	kolejkaTest();
-	virtual ~kolejkaTest();
-	void getRunTime();
-	void sendToFile();
+	 ~kolejkaTest();
+	 void run(int AmountOfComp);
 
-private:
-	double runTime;
+
 };
 
 #endif /* KOLEJKATEST_H_ */

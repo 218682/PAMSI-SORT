@@ -11,7 +11,7 @@ using namespace std;
 Kolejka::Kolejka()  //konstruktor
 {
     size_=SIZE;
-    count_=0;		//liczba dodanych eleentow
+    count_=0;		//liczba dodanych elementow
     tab_ = new int[size_];
 
 }
@@ -72,13 +72,33 @@ Kolejka::Kolejka()  //konstruktor
        }
 
 
-    void Kolejka::enqueue(int a)
+    void Kolejka::enqueue(int a, int b)
     {
-            //enlarge_by1();
-            //enlarge_x3();
+    	switch(b)
+    	{
+    	case 1:
+    		enlarge_by1();
+    		tab_[count_]=a;
+    		count_++;
+    		break;
+    	case 2:
     		enlarge_x2();
-            tab_[count_]=a;
-            count_++;
+    		tab_[count_]=a;
+    		count_++;
+    		break;
+
+    	case 3:
+    		enlarge_x3();
+    		tab_[count_]=a;
+    		count_++;
+    		break;
+    	default:
+    		cout<<"Niedozwolony znak w drugim argumencie!"<<endl;
+    		cout<<"Wybierz metode powiekszania tablicy: 1 - enlarge_by1(), 2 - enlarge_x2(), 3 - enlarge_x3()"<<endl;
+
+
+    	}
+
     }
 
     void Kolejka::display()

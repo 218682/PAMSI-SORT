@@ -12,8 +12,8 @@ class IRUNNABLE {
 public:
 	IRUNNABLE();
 	virtual ~IRUNNABLE();
-	void start();
-	void stop();
+	virtual void run(int AmountOfComp)=0;		//informacja czy dobiegl
+	//virtual bool prepared()=0;	//inf czy gotowy
 };
 
 #endif /* IRUNNABLE_H_ */

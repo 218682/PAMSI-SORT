@@ -12,7 +12,7 @@ class IQUEUE {			//interfejs
 public:
 	IQUEUE();
 	virtual ~IQUEUE();
-	virtual void enqueue(int a) =0;
+	virtual void enqueue(int a, int b) =0;
 
 };
 

@@ -10,7 +10,8 @@ class Kolejka : public IQUEUE
     Kolejka();
     ~Kolejka() {delete [] tab_;}
     int getSize();      //pobiera rozmiar tablicy
-    void enqueue(int a);	//dopisuje int a na koniec kolejki
+    void enqueue(int a, int b);	//dopisuje int a na koniec kolejki, int b to numer sposobu powiekszania tablicy
+    							//1- enlarge_by1(), 2-enlarge_x2(), 3-enlarge_x3()
     void display();    //wyswietla zawartosc tablicy
 
     private:
