@@ -8,11 +8,9 @@
 #include "IStack.h"
 
 IStack::IStack() {
-	// TODO Auto-generated constructor stub
 
 }
 
 IStack::~IStack() {
-	// TODO Auto-generated destructor stub
 }
 

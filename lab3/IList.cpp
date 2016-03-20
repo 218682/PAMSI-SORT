@@ -8,11 +8,9 @@
 #include "IList.h"
 
 IList::IList() {
-	// TODO Auto-generated constructor stub
 
 }
 
 IList::~IList() {
-	// TODO Auto-generated destructor stub
 }
 

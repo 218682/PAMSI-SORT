@@ -11,14 +11,12 @@ using namespace std;
 #include "Stopwatch.h"
 
 Stopwatch::Stopwatch() {
-	// TODO Auto-generated constructor stub
 	start_=0;
 	stop_=0;
 	RunTime_=0;
 }
 
 Stopwatch::~Stopwatch() {
-	// TODO Auto-generated destructor stub
 }
 
 double Stopwatch::getRunTime()
