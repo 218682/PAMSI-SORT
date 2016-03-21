@@ -12,6 +12,7 @@ class Kolejka : public IQueue
     int getSize();      		//pobiera rozmiar tablicy
     void enqueue(int a);		//dopisuje int a na koniec kolejki
     void display();    			//wyswietla zawartosc tablicy
+    void dequeue();
 
     private:
     int *tab_;     			//tablica dynamiczna, a raczej wskaznik do niej

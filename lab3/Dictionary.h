@@ -18,12 +18,13 @@ public:
 	virtual ~Dictionary();
 	void setWords();			//wpisuje slowa z pliku "words.txt" do tablicy words_[99171]
 	string getWords(int i);		//zwraca i-ty element tablicy words_[]
-	//void countLine();			//zapisuje do lines_ liczbe linni w pliku
-	//int getLines();				//zwraca lines_
-	void randomWords();
+	int countLines();			//zapisuje do lines_ liczbe linni w pliku
+	string RandomWords();     		//generuje losowe slowo ze slownika
+	int RandomNumber();
 private:
-	//int lines_;
 	string words_[AMOUNT_OF_WORDS];
+	string randomWord_;
+	//int size_;						//poczatkowy rozmiar slownika
 
 
 };

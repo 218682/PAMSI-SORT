@@ -9,49 +9,74 @@
 #include <fstream>
 #include <iostream>
 
+//#define SIZE 99171						//poczatkowy rozmiar slownika
+
 using namespace std;
 #include "Dictionary.h"
 
 Dictionary::Dictionary() {
+
+
 }
 
 Dictionary::~Dictionary() {
 
 }
 
-//int Dictionary::getLines()
-//{
-//	return lines_;
-//}
 
-//void Dictionary::countLine()
-//{
-//	fstream file;
-//	file.open("words.txt", ios::in);
-//	string line;
-//	int i=0;
-//	for (i=0; getline(file,line); ++i)
-//	;
-//	lines_=1;
-//}
+int Dictionary::countLines()				//sprawdza ilosc slow (linii) w pliku
+{
+	int lines=0;
+	fstream file;
+	file.open("dictionary.txt", ios::in);
+	string line;
+	while(!file.eof()) {
+	 getline(file,line);
+	lines++;
+	}
+	lines--;
+	file.close();
+	return lines;
+}
 
 
-void Dictionary::setWords()
+int Dictionary::RandomNumber()				//generuje losowy numer od 0 do liczby linii w pliku
+{
+	int r;
+	int amount=countLines();
+	r=(rand() % (amount-1));
+	return r;
+}
+
+string Dictionary::RandomWords()
+{
+	string rW;
+	int i=RandomNumber();
+	rW=getWords(i);							//pobiera i-ty (randomowy) wyraz z tablicy
+	return rW;
+}
+
+
+void Dictionary::setWords()					//wczytuje slownik do tablicy
 {
 	fstream file;
-	file.open("words.txt", ios::in);
+	file.open("dictionary.txt", ios::in);
 	if (file.good())
 	{
-		for(int i=0;i<AMOUNT_OF_WORDS;i++)
+		int s=0;
+		s=countLines();
+
+		for(int i=0;i<s;i++)
 		{
 			if(!file.eof())
 			{
 				getline(file, words_[i]);
+
 			}
 		}
-		file.close();
-	}
 
+	}
+	file.close();
 }
 string Dictionary::getWords(int i)
 {

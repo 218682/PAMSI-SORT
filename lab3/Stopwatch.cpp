@@ -29,11 +29,11 @@ void Stopwatch::setRunTime()
 	RunTime_=float(stop_-start_)/CLOCKS_PER_SEC;		//double czas_wyk1 = float(koniec-start)/CLOCKS_PER_SEC;
 }
 
-void Stopwatch::sendToFile()
+void Stopwatch::sendToFile(int number)
 {
 	FILE *pFile;
 	pFile=fopen("data.txt","a");		//otwiera plik do dopisywania (jesli nie istnieje, to go tworzy)
-	fprintf (pFile, "%.8f sek\n", RunTime_ );
+	fprintf (pFile, "%.8f sek\t %d\n", RunTime_, number );
 	fclose(pFile);
 
 }

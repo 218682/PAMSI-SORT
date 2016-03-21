@@ -14,7 +14,7 @@ public:
 	virtual ~Stopwatch();
 	double getRunTime();
 	void setRunTime();
-	void sendToFile();
+	void sendToFile(int number);
 	clock_t getStart();
 	void setStart();
 	clock_t getStop();
