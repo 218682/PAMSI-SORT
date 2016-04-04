@@ -119,7 +119,7 @@ int Lista::getSize()
  * @param item - element, ktory mam zostac dodany
  * @param position - indeks elementu, po ktorym ma zostac dodany item
  */
-void Lista::add(int item, int position)				///position - indeks elementu po ktorym mamy wstawic
+ void Lista::add(string item, int position)				///position - indeks elementu po ktorym mamy wstawic
  {
 	 enlarge_x2();
 //	 if(position==count_)

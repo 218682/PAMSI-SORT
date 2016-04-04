@@ -18,7 +18,7 @@ class Lista : public IList, public Dictionary, public Stopwatch, public Kolejka
 public:
 	Lista();
 	virtual ~Lista();
-	void add(int item, int position);//dodaje element do listy (gdziekolwiek), item - dodawany element, position - indeks elementu listy, po ktorym ma byc wstawiony item
+	void add(string item, int position);//dodaje element do listy (gdziekolwiek), item - dodawany element, position - indeks elementu listy, po ktorym ma byc wstawiony item
 		//throw(EmptyListExeption);
 	int getElem(int index);				//pobiera element ze wskazanego indeksu (bez usuwania)
 		//throw(EmptyListExeption);
@@ -34,7 +34,7 @@ public:
 	void displayFree();
 
 private:
-    int *name_;     		//wskaznik do tablicy dynamicznej z zapamietanymi obiektami
+    string *name_;     		//wskaznik do tablicy dynamicznej z zapamietanymi obiektami
     int *next_;				//wskaznik do tab dyn (kolejki) z indeksami nastepnych elementow
     Kolejka free_;			//obiekt typu kolejka wolnych lokalizacji
     int size_;      		//aktualny rozmiar tablicy
