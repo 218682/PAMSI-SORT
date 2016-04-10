@@ -9,7 +9,7 @@ class IRunnable {
 public:
 	IRunnable();
 	virtual ~IRunnable();
-	virtual void run(int)=0;		//informacja czy dobiegl
+	virtual void run(int AmountOfComp)=0;		//informacja czy dobiegl
 	//virtual bool prepared()=0;	//inf czy gotowy
 };
 

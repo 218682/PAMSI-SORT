@@ -113,7 +113,7 @@ int Kolejka::getFront()
  */
 int Kolejka::getRear()
 {
-	return queue_[rear_];
+	return queue_[rear_-1];
 }
 
 /**
