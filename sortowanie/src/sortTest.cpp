@@ -12,16 +12,16 @@ void SortTest::run(int ile)
 
       for (int j=0; j<ile;j++)
 	{
-	  tab[j]=std::rand()%ile+1;
-	  //tab[j]=j;
+	  //tab[j]=std::rand()%ile+1;
+	  tab[j]=j;
 	}
    /*========================================*/
       czas.start();
-      //QS(tab,ile);
-      sps(tab, ile-1);
+      QS(tab,ile);
+      //sps(tab, ile-1);
       czas.stop();
       std::cout<<czas.getTime()<<std::endl;
-      czas.dumpToFile("sps");
+      czas.dumpToFile("najgorszy");
       /* for (int i=0; i<=ile;i++)
       	{
       	   list.display(i);
